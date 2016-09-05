@@ -46,7 +46,7 @@ var displayStudents = function() {
     console.log('in displayStudents global students arr= ' , students);
     $('#outputDiv').empty();
     for (var i = 0; i < students.length; i++) {
-      //made buttons for the students
+
 
 
 
