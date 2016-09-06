@@ -2,6 +2,7 @@
 console.log('sourced!');
 var count = 0;
 var i = 0;
+var totalSeconds = 0;
 
 // student array
 
@@ -77,3 +78,24 @@ var studentNumber = document.createElement('p');
  };//end for loop
 //end studentButton
 //
+
+
+//prev button onClick
+  $('#previous').click( function(){
+    index--;
+    // wrap around to last student
+    if(index < 0){
+      index = students.length - 1;
+    }//end if
+    studentData();
+  }); // end previousButton click
+  //next button onClick
+  $('#next').on('click',next);
+  var next=function(){
+    index++;
+    // wrap around to first student
+    if(index >= students.length){
+      index = 0;
+    }//end if
+    studentData();
+  }; // end prevButton click
